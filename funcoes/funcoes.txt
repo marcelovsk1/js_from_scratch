@@ -1,0 +1,17 @@
+
+
+Funcao: Trecho de codigo que realiza uma tarefa especifica quando chamada
+ 
+  Funcao Void(vazia): Nao retorna valor
+
+  Funcao com Parametros: Pode receber dados externos para realizar a tarefa
+
+  Funcao Return: Retorna um valor para o codigo que chamou a funcao
+
+  Funcao Arrow: Sintaxe mais curta para escrever funcoes
+
+  Funcao Recursiva: Chama a si mesma para realizar uma tarefa
+
+  Funcao Anonima: Funcao sem nome
+
+  Funcao de Callback: Passa uma funcao como argumento para outra funcao e a chama dentro da funcao externa
