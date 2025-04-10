@@ -12,7 +12,7 @@
 function soma(a, b) {
     const somaDosNumeros = a + b // guardando o resultado da soma em uma variavel
 
-    return somaDosNumeros
+    return somaDosNumeros // retornando o resultado da soma
 }
 
 const resultadoDaSoma = soma(25, 25)
