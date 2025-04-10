@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página inicial</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="titulo"></h1>
+  <div class="container">
+    <h1>Boas vindas!</h1>
+    <p>Vamos personalizar sua saudação usando JavaScript!</p>
+    <div class="saudacao" id="mensagemSaudacao">Olá, visitante!</div>
+    <button onClick="personalizarSalve()">Personalizar o salve</button>
+  </div>
 
-    <script>
-        const titulo = document.getElementById("titulo")
+<script>
+
+    function personalizarSalve() {
         const nome = "Marcelovsk1"
+        document.getElementById("mensagemSaudacao").textContent = "Fala fi! " + nome
+    }
+</script>
 
-        titulo.innerHTML = "Salve meu fiiiiii " + nome // alterando o texto do h1
-        titulo.style.color = "red" // alterando a cor do texto do h1
-        titulo.style.fontSize = "50px" // alterando o tamanho da fonte do texto do h1
-        titulo.style.textAlign = "center" // alterando o alinhamento do texto do h1
-        titulo.style.fontFamily = "Arial" // alterando a fonte do texto do h1
-        titulo.style.padding = "10px" // alterando o padding do texto do h1
-        titulo.style.borderRadius = "10px" // alterando o raio da borda do texto do h1
-        titulo.style.border = "1px solid black" // alterando a borda do texto do h1
-        
-    </script>
 </body>
 </html>
