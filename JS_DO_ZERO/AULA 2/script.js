@@ -1,5 +1,6 @@
 function adicionarTarefa() {
     const mensagem = "Tarefa adicionada com sucesso!";
+    
 
     const inputTarefa = document.getElementById("inputTarefa")
     const tarefa = inputTarefa.value.trim();
@@ -13,9 +14,12 @@ function adicionarTarefa() {
     const novaTarefa = document.createElement("li");
         novaTarefa.textContent = tarefa;
         if (tarefa === "") {
-            document.getElementById("mensagem").textContent = "Por favor, digite uma tarefa!";
+            const mensagemElement = document.getElementById("mensagem");
+            mensagemElement.textContent = "Por favor, digite uma tarefa!";
+            mensagemElement.style.color = "red";
         } else {
             listaTarefas.appendChild(novaTarefa);
             inputTarefa.value = "";
+            document.getElementById("mensagem").style.color = "green";
         }
   }
