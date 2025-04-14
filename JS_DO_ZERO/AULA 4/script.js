@@ -1,7 +1,9 @@
-function adicionarTarefa() {
-    const mensagem = "Tarefa adicionada com sucesso!";
-    
 
+let tarefas = [];
+
+function adicionarTarefa() {
+
+    const mensagem = "Tarefa adicionada com sucesso!";
     const inputTarefa = document.getElementById("inputTarefa")
     const tarefa = inputTarefa.value.trim();
 
@@ -10,16 +12,26 @@ function adicionarTarefa() {
             document.getElementById("mensagem").textContent = "";
         }, 3000);
 
-    const listaTarefas = document.getElementById("listaTarefas");
-    const novaTarefa = document.createElement("li");
-        novaTarefa.textContent = tarefa;
         if (tarefa === "") {
             const mensagemElement = document.getElementById("mensagem");
             mensagemElement.textContent = "Por favor, digite uma tarefa!";
             mensagemElement.style.color = "red";
         } else {
-            listaTarefas.appendChild(novaTarefa);
-            inputTarefa.value = "";
-            document.getElementById("mensagem").style.color = "green";
-        }
-  }
+            tarefas.push(tarefa);
+            exibirTarefas();
+    }
+}
+
+function exibirTarefas() {
+    const listaTarefas = document.getElementById("listaTarefas");
+    listaTarefas.innerHTML = "";
+
+    let i = 0
+    // for (iterator, condition, increment/frequency)
+    // i++ = i = i + 1
+    for (i; i < tarefas.length; i++) {
+        const novaTarefa = document.createElement("li");
+        novaTarefa.textContent = tarefas[i];
+        listaTarefas.appendChild(novaTarefa);
+    }
+}
