@@ -34,6 +34,8 @@ function exibirTarefas() {
         novaTarefa.textContent = tarefas[i];
 
         const botaoRemover = document.createElement("button")
+        botaoRemover.className = "remover"
+        botaoRemover.textContent = "Remover"
 
         novaTarefa.appendChild(botaoRemover)
         listaTarefas.appendChild(novaTarefa);
