@@ -32,6 +32,10 @@ function exibirTarefas() {
     for (i; i < tarefas.length; i++) {
         const novaTarefa = document.createElement("li");
         novaTarefa.textContent = tarefas[i];
+
+        const botaoRemover = document.createElement("button")
+
+        novaTarefa.appendChild(botaoRemover)
         listaTarefas.appendChild(novaTarefa);
     }
 }
