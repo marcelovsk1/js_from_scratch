@@ -57,3 +57,12 @@ function removerTarefa(i) {
     mensagemElement.style.color = "black";
 
 }
+
+function editarTarefa(i) {
+    const tarefaEditada = prompt("Edite a tarefa:")
+    if (tarefaEditada.trim !== "") {
+        tarefas[i] = tarefaEditada
+        exibirTarefas()
+    }
+
+}
