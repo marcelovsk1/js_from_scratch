@@ -37,7 +37,13 @@ function exibirTarefas() {
         botaoRemover.textContent = "Remover"
         botaoRemover.onclick = () => removerTarefa(i)
 
+        const botaoEditar = document.createElement("button")
+        botaoEditar.className = "editar"
+        botaoEditar.textContent = "Editar"
+        botaoEditar.onclick = () => editarTarefa(i)
+
         novaTarefa.appendChild(botaoRemover)
+        novaTarefa.appendChild(botaoEditar)
         listaTarefas.appendChild(novaTarefa);
     }
 }
@@ -49,5 +55,14 @@ function removerTarefa(i) {
     const mensagemElement = document.getElementById("mensagem");
     mensagemElement.textContent = "A sua tarefa foi removida!";
     mensagemElement.style.color = "black";
+
+}
+
+function editarTarefa(i) {
+    const tarefaEditada = prompt("Edite a tarefa:")
+    if (tarefaEditada.trim !== "") {
+        tarefas[i] = tarefaEditada
+        exibirTarefas()
+    }
 
 }
