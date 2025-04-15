@@ -26,18 +26,28 @@ function exibirTarefas() {
     const listaTarefas = document.getElementById("listaTarefas");
     listaTarefas.innerHTML = "";
 
-    let i = 0
     // for (iterator, condition, increment/frequency)
     // i++ = i = i + 1
-    for (i; i < tarefas.length; i++) {
+    for (let i = 0; i < tarefas.length; i++) {
         const novaTarefa = document.createElement("li");
         novaTarefa.textContent = tarefas[i];
 
         const botaoRemover = document.createElement("button")
         botaoRemover.className = "remover"
         botaoRemover.textContent = "Remover"
+        botaoRemover.onclick = () => removerTarefa(i)
 
         novaTarefa.appendChild(botaoRemover)
         listaTarefas.appendChild(novaTarefa);
     }
+}
+
+function removerTarefa(i) {
+    tarefas.splice(i, 1)
+    exibirTarefas()
+
+    const mensagemElement = document.getElementById("mensagem");
+    mensagemElement.textContent = "A sua tarefa foi removida!";
+    mensagemElement.style.color = "black";
+
 }
